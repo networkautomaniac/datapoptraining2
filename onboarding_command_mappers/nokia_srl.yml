@@ -9,12 +9,12 @@ sync_devices:
     commands:
       - command: "show version | as json"
         parser: none
-        jpath: "basic system info.Serial Number"
+        jpath: '*."Serial Number" | [0]'
   device_type:
     commands:
       - command: "show version | as json"
         parser: none
-        jpath: "basic system info.Chassis Type"
+        jpath: '*."Chassis Type" | [0]'
   mgmt_interface:
     commands:
       - command: "show interface all | as json"

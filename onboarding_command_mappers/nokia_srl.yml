@@ -28,4 +28,4 @@ sync_devices:
         parser: none
         jpath: "interfaces[?name=='mgmt0'].subinterfaces[].address[?type=='IPv4'][].prefix | [0]"
         post_processor: "{{ obj[0].split('/')[-1] }}"
-        iterable_type: "str"
+        iterable_type: "int"
